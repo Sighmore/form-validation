@@ -11,21 +11,21 @@ function validateform() {
   
     let isValid = true;
   
-    if (username == "") {
+    if (username == "" || username.length<6) {
       document.getElementById("name-error").innerHTML =
-        "*Please Enter your Valid Username";
+        "*InValid username: 6 characters long";
       isValid = false;
     }
   
     if (email == "") {
       document.getElementById("email-error").innerHTML =
-        "*Please Enter your Valid Email";
+        "*Invalid Email";
       isValid = false;
     }
   
-    if (password == "") {
+    if (password == "" || password.length<8 ) {
       document.getElementById("password-error").innerHTML =
-        "*Please Enter your Valid Password";
+        "*Please Enter your Valid Password: 8 characters long";
       isValid = false;
     }
   
